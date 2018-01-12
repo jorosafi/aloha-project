@@ -1,0 +1,110 @@
+body{
+  font-size: 16px;
+}
+
+.container{
+  max-width: 100%;
+}
+
+/* header */
+header{
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: lightblue;
+}
+
+nav{
+  flex-basis: 20%;
+  background: pink;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-item{
+  border: dotted red 1px;
+  height: 55%
+}
+
+.logo{
+  flex-basis: 49%;
+  order: 1;
+}
+
+.menu{
+  flex-basis: 100%;
+  order: 3;
+  height: 45%;
+}
+
+.cart{
+  flex-basis: 49%;
+  order: 2
+}
+
+.hero-banner{
+  flex-basis: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background: coral;
+}
+
+/* Styles Section */
+.styles{
+  background: lightgreen;
+  text-align: center;
+}
+
+.styles-head{
+  padding: 20px 50px;
+}
+
+.styles-menu{
+  display: flex;
+  justify-content: space-between;
+  
+}
+
+
+/* media queries */
+@media all and (min-width: 600px){
+  nav{
+    flex-basis: 17%;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .nav-item{
+    border: dotted red 1px;
+    height: 100%;
+  }
+  
+  .logo{
+    flex-basis: 25%;
+    order: 1;
+  }
+  
+  .menu{
+    flex-basis: 49%;
+    order: 2;
+  }
+  
+  .cart{
+    flex-basis: 25%;
+    order: 3;
+  }
+  .hero-banner{
+    flex-basis: 83%;
+  }
+}
+
+
+
+@media all and (min-width: 1240px){
+
+}
