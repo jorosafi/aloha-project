@@ -2,6 +2,15 @@
 
 /* check that Font Faces are working properly before submitting */
 
+/* questions for Jim/Rose:
+1. in the products section, I am trying to constrain the size of the product images using percentages, but it is not responsing. When I set the height in px it works, but percentages won't work.
+*/
+
+/* to-do:
+1) fix paragraph fonts
+2) go through all text and make sure fonts match
+3) check why raleway fonts are not working\ */
+
 @font-face {
   font-family: 'Raleway';
   src: url('Raleway-LightItalic.eot');
@@ -90,6 +99,62 @@
   font-style: normal;
 }
 
+/* Font Styles */
+
+p{
+  font-family: raleway-light;
+  max-width: 100%;
+}
+
+h1{
+  font-family: playfair-display;
+  font-size: 3.5rem;
+  font-style: italic;
+  font-weight: 100;
+  max-width: 100%;
+}
+
+h1 span{
+  font-weight: bold;
+  font-style: normal;
+  max-width: 100%;
+}
+
+h2{
+  font-family: 'raleway';
+  color: white;
+  max-width: 100%;
+  font-size: 2em;
+}
+
+h3{
+  font-family: raleway-light;
+  color: white;
+  font-size: 1.8rem;
+  max-width: 100%;
+}
+
+h3 span{
+  font-family: playfair-display;
+  font-style: normal;
+  font-size: 4rem;
+  max-width: 100%;
+}
+
+h4{
+  font-family: playfair-display;
+  max-width: 100%;
+}
+
+h5{
+  font-family: playfair-display;
+  max-width: 100%;
+}
+
+.menu{
+  color: #e2574c;
+  font-size: 1.5em;
+}
 
 *{
   box-sizing: border-box;
@@ -104,9 +169,12 @@ body{
 }
 
 .section-head{
-  padding: 50px 50px;
-  text-align: center;
-  height: 33vh;
+  padding: 0 10%;
+  height: 40vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 /* header */
@@ -115,12 +183,10 @@ header{
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  background: lightblue;
 }
 
 nav{
   flex-basis: 20%;
-  background: pink;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -128,7 +194,6 @@ nav{
 }
 
 .nav-item{
-  border: dotted red 1px;
   height: 55%
 }
 
@@ -142,12 +207,24 @@ nav{
 
 .logo img{
   width: 80%;
+  max-height: 90%
 }
 
 .menu{
   flex-basis: 100%;
   order: 3;
   height: 45%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  padding: auto 100px;
+  border-top: #d7d7d7 solid 1px;
+}
+
+.menu li{
+  padding: 0;
+  margin: 0;
 }
 
 .cart{
@@ -170,21 +247,23 @@ nav{
   justify-content: center;
   align-items: center;
   text-align: center;
-  background: coral;
+  background: url(../images/banner-girl.png), linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.3)), url(../images/flower-bkgd.jpg);
+  background-repeat: no-repeat;
+  background-position: 50% 7em, center, center;
+  background-size: contain, cover, cover;
 }
 
 /* Styles Section */
 .styles{
-  background: lightgreen;
   text-align: center;
-  height: auto;
+  height: 100vh;
 }
 
 .styles-flex{
   display: flex;
   flex-direction: column;
   background-color: aqua;
-  height: 100vh;
+  height: 60%;
 }
 
 .styles-menu{
@@ -205,14 +284,60 @@ nav{
 }
 
 .styles-item{
-  border: 1px royalblue dotted;
+  border: 0.2em solid white;
   flex-basis: 50%;
   text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .mens, .womens{
   flex-basis: 100%;
 }
+
+.mens{
+  background: url(../images/mens-category.jpg);
+  background-position: right;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.trends{
+  background: url(../images/trends-category.jpg);
+  background-position: right;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.glasses{
+  background: url(../images/glasses-category.jpg);
+  background-position: right;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.sale{
+  background: url(../images/sale-category.jpg);
+  background-position: right;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.bags{
+  background: url(../images/bags-category.jpg);
+  background-position: right bottom 20%;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.womens{
+  background: url(../images/womens-category.jpg);
+  background-position: right top;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
 
 /* prudcts */
 .products-container{
@@ -228,7 +353,20 @@ nav{
   text-align: center;
 }
 
+.product img{
+  max-height: 10%;
+  width: auto;
+}
+
 /* updates section */
+.updates{
+  height: 30vh;
+  background: url(../images/wave-bkgd.jpg);
+  background-position: bottom center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: white;
+}
 .email-form{
   width: 85%;
   text-align: center;
@@ -281,6 +419,10 @@ li{
   display: none;
 }
 
+i{
+  color: white;
+}
+
 /* media queries */
 @media all and (min-width: 600px){
   /* header changes for Tab and Desk */
@@ -291,7 +433,6 @@ li{
   }
   
   .nav-item{
-    border: dotted red 1px;
     height: 100%;
   }
   
@@ -313,13 +454,17 @@ li{
     flex-basis: 25%;
     order: 3;
   }
+
+  .cart img{
+    left: 0%;
+  }
   .hero-banner{
     flex-basis: 86%;
   }
 
   /* Styles Menu changes for Tab and Desk */
   .styles-flex{
-    height: 66vh;
+    height: 60vh;
   }
 
   .styles-item{
@@ -331,14 +476,21 @@ li{
   }
 
   /* product changes for tab and desk */
+  .products-section{
+    height: 100vh;
+  }
   .products-container{
     flex-direction: row;
     flex-wrap: wrap;
+    height: 60vh;
   }
 
   .product{
     flex-basis: 50%;
+    max-height: 50%;
   }
+
+
   
   /* updates section changes for tab and desk */
   input{
@@ -391,9 +543,16 @@ li{
 
 
 @media all and (min-width: 1240px){
+  /* top nav changes for desktop */
+  .menu{
+    padding: 10%;
+  }
   /* Styles menu */
+  .styles{
+    height: auto;
+  }
   .styles-flex{
-    height: 33vh;
+    height: 40vh;
   }
 
   /* product changes for desk */
@@ -401,8 +560,8 @@ li{
     flex-basis: 25%
   }
 
-   /* updates section changes for desk */
-   input{
+  /* updates section changes for desk */
+  input{
     width: 50%;
   }
 }
