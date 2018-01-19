@@ -5,39 +5,43 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="css/reset.css">
-  <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="fonts/fonts.css">
+  <link rel="stylesheet" href="css/style.css">
   <script src="https://use.fontawesome.com/481c1dc698.js"></script>
   <title>Aloha Apparel Co.</title>
 </head>
 <body>
-  <header class="container">
+  <header class="container nav-bar">
     <nav>
       <div class="nav-item logo">
         <img src="images/aloha-logo.svg" alt="Aloha Home">
       </div>
       <ul class="nav-item menu">
-        <li>About</li>
-        <li>Shop</li>
-        <li>Featured</li>
-        <li>Updates</li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#shop">Shop</a></li>
+        <li><a href="#featured">Featured</a></li>
+        <li><a href="#updates">Updates</a></li>
       </ul>
       <div class="nav-item cart">
         <img src="images/cart-icon.svg" alt="Cart">
       </div>
     </nav>
-    <section class="hero-banner">
-      <h3>New Collection <br>
-      <span>Spring/Summer 2016</span></h3>
-    </section>
   </header>
 
-  <section class="container styles">
+  <section class="container hero-banner">
+    <h3>NEW COLLECTION <br>
+      <span>Spring/Summer 2016</span>
+    </h3>
+  </section>
+
+  <section id='about' class="container styles">
     <article class="section-head styles-head">
-      <h1>Hand-Crafted <span>Styles</span></h1>
+      <h1>Hand-Crafted 
+          <span>Styles</span>
+      </h1>
       <p>Aloha Apparel Co. sells only the finest ready-to-travel clothing. Browse our current selection of products or sign-up for updates below.</p>
     </article>
-    <section class="styles-flex">
+    <section id="shop" class="styles-flex">
       <div class="styles-menu top">
         <div class="styles-item mens"><h2>Men's</h2></div>
         <div class="styles-item trends"><h2>Trends</h2></div>
@@ -52,67 +56,122 @@
     
   </section>
 
-  <section class="container products-section">
+  <section id='featured' class="container products-section">
     <article class="section-head products-head">
-      <h1>Most-Loved <span>Products</span></h1>
+      <h1>Most-Loved 
+        <span>Products</span>
+      </h1>
     </article>
-    <section class="products-container">
-      <div class="product">
+    <section class="main-carousel">
+      <div class="carousel-cell">
+        <img src="images/checked-stretch-dress.jpg" alt=""/>
         <p>Dresses</p>
         <h4>Checked Stretch Dress</h4>
         <p>$129.00</p>
-        <img src="images/checked-stretch-dress.jpg" alt=""/>
+        <button class="add-to-cart">Add to Cart</button>
       </div>
-      <div class="product">
+      <div class="carousel-cell">
+        <img src="images/blue-hipster-backpack.jpg" alt=""/>
         <p>Bags</p>
         <h4>Blue Hipster Backpack</h4>
         <p>$69.00</p>
-        <img src="images/blue-hipster-backpack.jpg" alt=""/>
+        <button class="add-to-cart">Add to Cart</button>
       </div>
-      <div class="product">
+      <div class="carousel-cell">
+        <img src="images/demin-overall-shorts.jpg" alt=""/>
         <p>Denim</p>
         <h4>Denim Overall Shorts</h4>
         <p>$89.00</p>
-        <img src="images/demin-overall-shorts.jpg" alt=""/>
+        <button class="add-to-cart">Add to Cart</button>
       </div>
-      <div class="product">
+      <div class="carousel-cell">
+        <img src="images/pink-dotted-dress.jpg" alt=""/>
         <p>Dresses</p>
         <h4>Pink Dotted Dress</h4>
         <p>$99.00</p>
-        <img src="images/pink-dotted-dress.jpg" alt=""/>
+        <button class="add-to-cart">Add to Cart</button>
       </div>
+      <div class="carousel-cell">
+        <img src="images/stretch-knit-dress.jpg" alt=""/>
+        <p>Dresses</p>
+        <h4>Stretch Knit Dress</h4>
+        <p>$169.00</p>
+        <button class="add-to-cart">Add to Cart</button>
+      </div>
+      <div class="carousel-cell">
+        <img src="images/cotton-blue-shirt.jpg" alt=""/>
+        <p>Shirts</p>
+        <h4>Cotton Blue Shirt</h4>
+        <p>$89.00</p>
+        <button class="add-to-cart">Add to Cart</button>
+      </div>
+      <div class="carousel-cell">
+        <img src="images/blue-silk-dress.jpg" alt=""/>
+        <p>Dresses</p>
+        <h4>Blue Silk Dress</h4>
+        <p>$119.00</p>
+        <button class="add-to-cart">Add to Cart</button>
+      </div>
+      <div class="carousel-cell">
+          <img src="images/cotton-blue-shirt.jpg" alt=""/>
+          <p>Shirts</p>
+          <h4>Cotton Yellow Tshirt</h4>
+          <p>$39.00</p>
+          <button class="add-to-cart">Add to Cart</button>
+        </div>
     </section>
+
   </section>
 
-  <article class="container section-head updates">
+  <article id='updates' class="container section-head updates">
     <h1>Sign-up for <span>Updates</span></h1>
     <p>Stay updated on our latest product releases, be first to find out about upcoming sales, and get free style tips from our blog. Unsubscribe at any time.</p>
-    <div class="email-form">
-      <input type="email" name="email" id="" placeholder="Email">
-      <button class="email-button">Subscribe</button>
-    </div> 
+    <form action="#" class="email-form">
+        <input type="email" name="email" class="email-input" id="" placeholder="Your Email"/>
+        <button type="submit" class="email-button">Subscribe</button>
+    </form>
+
+
+
+
   </article>
 
   <footer class="container">
     <div class="footer-text">
-      <p class="copyright">&copy 2016 Aloha Apparel Co. <br>
-       Powered by HTML and CSS</p>
-       <p class="copyright">604-604-6040. info@alohaapparel.com</p>
+      <h5 class="copyright">&copy 2016 Aloha Apparel Co. <br>
+       Powered by HTML and CSS</h5>
+       <h5 class="copyright">604-604-6040. <a>info@alohaapparel.com</a></h5>
       <p class="address">1490 W Broadway <br>
       Vancouver, BC, Canada</p>
     </div>
     <div class="social-box">
         <ul>
-            <li><i class="fa fa-facebook" aria-hidden="true"></i><span class="social-text">&nbsp&nbspFacebok</span></li>
-            <li><i class="fa fa-pinterest" aria-hidden="true"></i><span class="social-text">&nbspTwitter</span></li>
-            <li><i class="fa fa-instagram" aria-hidden="true"></i><span class="social-text">&nbspInstagram</Span></li>
-            <li><i class="fa fa-twitter" aria-hidden="true"></i><span class="social-text">&nbspPinterest</span></li>
-            <li><i class="fa fa-google-plus" aria-hidden="true"></i><span class="social-text">Google+</span></li>
+            <li class="social-list">
+                <i class="fa fa-facebook" aria-hidden="true"></i>
+                <span class="social-text">&nbsp&nbspFacebok</span>
+            </li>
+            <li class="social-list">
+              <i class="fa fa-pinterest" aria-hidden="true"></i>
+              <span class="social-text">&nbspTwitter</span>
+            </li>
+            <li class="social-list">
+              <i class="fa fa-instagram" aria-hidden="true"></i>
+              <span class="social-text">&nbspInstagram</Span>
+            </li>
+            <li class="social-list">
+              <i class="fa fa-twitter" aria-hidden="true"></i>
+              <span class="social-text">&nbspPinterest</span>
+            </li>
+            <li class="social-list">
+              <i class="fa fa-google-plus" aria-hidden="true"></i>
+              <span class="social-text">Google+</span>
+            </li>
         </ul>
     </div>
-    
-    
   </footer>
-  
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+  <script src="js/aloha-js.js"></script>
 </body>
 </html>

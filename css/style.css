@@ -4,21 +4,26 @@
 
 /* questions :
 
-*/
 
-/* to-do:
-1) fix paragraph fonts
-2) go through all text and make sure fonts match
-3) check why raleway fonts are not working\ */
 
 /* Font Styles */
 
+  body{
+  color: #2d2d2d;
+  }
+  
   p{
     font-family: 'Raleway';
-    font-weight: light;
+    font-weight: lighter;
     max-width: 100%;
-    padding: 0.8em;
-    line-height: 2em;
+    line-height: 1.9em;
+  }
+  .carousel-cell p{
+    color: #969696;
+    text-align: center;
+    font-size: 0.7em;
+    text-transform: uppercase;
+    font-weight: bold;
   }
 
   h1{
@@ -27,7 +32,7 @@
     font-style: italic;
     font-weight: 100;
     max-width: 100%;
-    padding: 1em 0;
+    padding: 0 0 1em 0;
     text-align: center;
   }
 
@@ -41,13 +46,14 @@
     font-family: 'Raleway';
     color: white;
     max-width: 100%;
-    font-size: 2em;
+    font-size: 1.5em;
+    text-transform: uppercase;
   }
 
   h3{
     font-family: 'raleway';
     color: white;
-    font-size: 1.8rem;
+    font-size: 1.3rem;
     font-weight: light;
     max-width: 100%;
   }
@@ -55,30 +61,46 @@
   h3 span{
     font-family: 'Playfair Display';
     font-style: normal;
-    font-size: 3rem;
+    font-size: 2.7rem;
     max-width: 100%;
+    display: inline-block;
+    padding-top: 0.6em;
   }
 
   h4{
     font-family: 'Playfair Display';
     max-width: 100%;
+    color: #e2574c;
+    text-align: center;
+    font-size: 1.3em;
+    padding: 0.8em 0 0.8em 0;
   }
 
   h5{
     font-family: 'Playfair Display';
     max-width: 100%;
+    line-height: 1.5
   }
 
-  li{
+  h5 a{
+    text-decoration: underline;
+  }
+
+  a{
+    text-decoration: none;
+  }
+
+  li a{
     font-family: 'Raleway';
     color: #e2574c;
-    font-size: 0.9em;
     text-transform: uppercase;
   }
 
   *{
     box-sizing: border-box;
   }
+
+  
 
   body{
     font-size: 16px;
@@ -91,7 +113,7 @@
   }
 
   .section-head{
-    padding: 0 10%;
+    padding: 0 5%;
     min-height: 40vh;
     display: flex;
     justify-content: center;
@@ -103,22 +125,24 @@
 
 /* header */
   header{
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    width: 100%;
+    height: 125px;
+    position: fixed;
+    background: white;
+    z-index: 10;
+    margin-top:-125px;
   }
 
   nav{
-    flex-basis: 20%;
+    height: 100%;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    align-items: center;
+    align-items: stretch;
   }
 
   .nav-item{
-    height: 55%
+    height: 55%;
   }
 
   .logo{
@@ -146,6 +170,10 @@
     border-top: #d7d7d7 solid 1px;
   }
 
+  .menu ul{
+    padding: 0 10px;
+  }
+
   .menu li{
     padding: 0;
     margin: 0;
@@ -160,42 +188,47 @@
   }
 
   .cart img{
-    max-height: 50%;
+    max-height: 3em;
     position: relative;
-    left: 20%;
+    left: 25%;
   }
 
   .hero-banner{
-    flex-basis: 80%;
+    min-height: 500px;
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
-    background: url(../images/banner-girl.png), linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.3)), url(../images/flower-bkgd.jpg);
+    background: 
+      linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), 
+      url(../images/banner-girl.png), 
+      url(../images/flower-bkgd.jpg);
     background-repeat: no-repeat;
-    background-position: 50% 7em, center, center;
-    background-size: contain, cover, cover;
+    background-position: center, 50% bottom, center;
+    background-size: cover, 180px, cover;
+    margin-top: 125px;
   }
+
 
 /* Styles Section */
   .styles{
     text-align: center;
-    height: 100vh;
+    min-height: 100vh;
   }
 
   .styles-flex{
     display: flex;
     flex-direction: column;
     background-color: aqua;
-    height: 60%;
+    min-height: 100vh;
   }
 
   .styles-menu{
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
-    flex-basis: 100%;
-    height: 100%
+    flex-basis: 49.9%;
+    height: 50vh;
   }
 
   .top{
@@ -217,45 +250,51 @@
 
   .mens, .womens{
     flex-basis: 100%;
+    border-left: none;
+    border-right: none;
   }
 
   .mens{
-    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(../images/mens-category.jpg);
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../images/mens-category.jpg);
     background-position: right;
     background-size: cover;
     background-repeat: no-repeat;
   }
 
   .trends{
-    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(../images/trends-category.jpg);
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../images/trends-category.jpg);
     background-position: right;
     background-size: cover;
     background-repeat: no-repeat;
+    border-left: none;
   }
 
   .glasses{
-    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(../images/glasses-category.jpg);
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../images/glasses-category.jpg);
     background-position: right;
     background-size: cover;
     background-repeat: no-repeat;
+    border-right: none;
   }
 
   .sale{
-    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(../images/sale-category.jpg);
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../images/sale-category.jpg);
     background-position: right;
     background-size: cover;
     background-repeat: no-repeat;
+    border-left: none;
   }
 
   .bags{
-    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(../images/bags-category.jpg);
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../images/bags-category.jpg);
     background-position: right bottom 20%;
     background-size: cover;
     background-repeat: no-repeat;
+    border-right: none;
   }
 
   .womens{
-    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(../images/womens-category.jpg);
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../images/womens-category.jpg);
     background-position: right top;
     background-size: cover;
     background-repeat: no-repeat;
@@ -263,61 +302,230 @@
 
 
 /* products */
-  .products-container{
-    display: flex;
-    justify-content: space-around;
-    flex-direction: column;
-    align-items: center;
+  /* Flickity Carousel Styling */
+  .flickity-enabled {
+    position: relative;
+  }
+  
+  .flickity-enabled:focus { outline: none; }
+  
+  .flickity-viewport {
+    overflow: hidden;
+    position: relative;
+    height: 100%;
+  }
+  
+  .flickity-slider {
+    position: absolute;
+    width: 100%;
+    height: 100%;
   }
 
-  .product{
+  .carousel-cell {
+    width: 100%; 
+    height: 80vh; 
+    margin-right: 10px;
+  }
+  
+  /* draggable */
+  
+  .flickity-enabled.is-draggable {
+    -webkit-tap-highlight-color: transparent;
+            tap-highlight-color: transparent;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+  }
+  
+  .flickity-enabled.is-draggable .flickity-viewport {
+    cursor: move;
+    cursor: -webkit-grab;
+    cursor: grab;
+  }
+  
+  .flickity-enabled.is-draggable .flickity-viewport.is-pointer-down {
+    cursor: -webkit-grabbing;
+    cursor: grabbing;
+  }
+  
+  /* ---- previous/next buttons ---- */
+  
+  .flickity-prev-next-button {
+    position: absolute;
+    top: 50%;
+    width: 44px;
+    height: 44px;
+    border: none;
+    border-radius: 50%;
+    background: white;
+    background: hsla(0, 0%, 100%, 0.75);
+    cursor: pointer;
+    /* vertically center */
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+  }
+  
+  .flickity-prev-next-button:hover { background: white; }
+  
+  .flickity-prev-next-button:focus {
+    outline: none;
+    box-shadow: 0 0 0 5px #09F;
+  }
+  
+  .flickity-prev-next-button:active {
+    opacity: 0.6;
+  }
+  
+  .flickity-prev-next-button.previous { left: 10px; }
+  .flickity-prev-next-button.next { right: 10px; }
+  /* right to left */
+  .flickity-rtl .flickity-prev-next-button.previous {
+    left: auto;
+    right: 10px;
+  }
+  .flickity-rtl .flickity-prev-next-button.next {
+    right: auto;
+    left: 10px;
+  }
+  
+  .flickity-prev-next-button:disabled {
+    opacity: 0.3;
+    cursor: auto;
+  }
+  
+  .flickity-prev-next-button svg {
+    position: absolute;
+    left: 20%;
+    top: 20%;
+    width: 60%;
+    height: 60%;
+  }
+  
+  .flickity-prev-next-button .arrow {
+    fill: #333;
+  }
+  
+  /* ---- page dots ---- */
+  
+  .flickity-page-dots {
+    position: absolute;
+    width: 100%;
+    bottom: 10px;
+    padding: 0;
+    margin: 0;
+    list-style: none;
     text-align: center;
-    max-height: 50%;
+    line-height: 1;
+  }
+  
+  .flickity-rtl .flickity-page-dots { direction: rtl; }
+  
+  .flickity-page-dots .dot {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    margin: 0 8px;
+    background: #333;
+    border-radius: 50%;
+    opacity: 0.25;
+    cursor: pointer;
+  }
+  
+  .flickity-page-dots .dot.is-selected {
+    opacity: 1;
   }
 
+  /* other product styling */
+  .add-to-cart{
+    display: block;
+    height: 25px;
+    padding: 0 1.5em 0 1.5em;
+    border-radius: 30px;
+    background: #2d2d2d;
+    color: white;
+    text-align: center;
+    margin: 0 auto;
+    border: none;
+    font-size: 0.7em;
+    margin-top: 1em;
+  }
 
+  .carousel-cell img{
+    display: block;
+    margin: 0 auto;
+  }
 /* updates section */
   .updates{
-    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../images/wave-bkgd.jpg);
-    background-position: bottom center;
-    background-size: cover;
+    background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(../images/wave-bkgd.jpg);
+    background-position: center, center bottom;
     background-repeat: no-repeat;
     color: white;
-  }
-  .email-form{
-    width: 85%;
     text-align: center;
-  }
-  input{
-    width: 100%;
-    height: 2em;
-    border-radius: 30px;
-    border: 1px solid black;
-    margin: 0 auto;
-    display: inline-block;
+    margin-bottom: 0.5em;
+    min-height: 50vh;
   }
 
-  button{
-    background: red;
+  .updates h1{
+    padding-top: 1em;
+    text-shadow: 1px 1px 4px #2d2d2d;
+  }
+
+  .updates p{
+    text-shadow: 1px 1px 4px #2d2d2d;
+  }
+
+  .email-form{
+    width: 90%;
+    padding: 2em 0;
+    position: relative;
+  }
+  .email-input{
+    width: 100%;
+    height: 2.5em;
+    border-radius: 30px;
+    border: none;
+    margin: 0 auto;
+    padding: 1.7em 0;
+  }
+
+  .email-button{
+    background: #e2574c;
     color: white;
     border-radius: 30px;
-    height: 2em;
+    height: 2.5em;
+    padding: 0 2em;
+    position: absolute;
+    top: 2.11rem;
+    right: 0.2rem;
+    font-size: 0.85em;
+  }
+
+  input::placeholder{
+    color: #969696;
+    padding: 1rem;
+    font-size: 0.8rem;
+    font-weight: 300;
   }
 
 /* Footer Section */
   footer{
-    height: 30vh;
+    min-height: 40vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-content: center;
     color: white;
-    background: black;
+    background:#242424;
   }
 
   .copyright, .address{
     text-align: center;
     padding: 5px;
+  }
+
+  .address{
+    color: #969696;
   }
 
   ul{
@@ -327,7 +535,7 @@
     flex-direction: row;
   }
 
-  li{
+  .social-list{
     text-decoration: none;
     padding: 1em 1em;
   }
@@ -347,6 +555,10 @@
       font-size: 4rem;
     }
     /* header changes for Tab and Desk */
+    header{
+      height: 80px;
+      margin-top: -100px;
+    }
     nav{
       flex-basis: 14%;
       justify-content: space-between;
@@ -380,7 +592,8 @@
       left: 0%;
     }
     .hero-banner{
-      flex-basis: 86%;
+      margin-top: 100px;
+
     }
 
     /* Styles Menu changes for Tab and Desk */
