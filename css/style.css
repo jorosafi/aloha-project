@@ -1,8 +1,6 @@
 
 /* to do:
   1. give font families backups
-  2. add js to cart icon
-  3. validate code
 
 */
 
@@ -15,7 +13,7 @@
   }
   
   p{
-    font-family: 'Raleway';
+    font-family: 'Raleway', Helvetica, Arial, sans-serif;
     font-weight: lighter;
     max-width: 100%;
     line-height: 1.9em;
@@ -29,7 +27,7 @@
   }
 
   h1{
-    font-family: 'Playfair Display';
+    font-family: 'Playfair Display', 'Times New Roman', Times, serif;
     font-size: 1.9rem;
     font-style: italic;
     font-weight: 100;
@@ -45,7 +43,7 @@
   }
 
   h2{
-    font-family: 'Raleway';
+    font-family: 'Raleway', Helvetica, Arial, sans-serif;
     color: white;
     max-width: 100%;
     font-size: 1.5em;
@@ -57,7 +55,7 @@
   }
 
   h3{
-    font-family: 'raleway';
+    font-family: 'Raleway', Helvetica, Arial, sans-serif;
     color: white;
     font-size: 1.3rem;
     font-weight: lighter;
@@ -65,7 +63,7 @@
   }
 
   h3 span{
-    font-family: 'Playfair Display';
+    font-family: 'Playfair Display', 'Times New Roman', Times, serif;
     font-style: normal;
     font-size: 2.7rem;
     max-width: 100%;
@@ -74,7 +72,7 @@
   }
 
   h4{
-    font-family: 'Playfair Display';
+    font-family: 'Playfair Display', 'Times New Roman', Times, serif;
     max-width: 100%;
     color: #e2574c;
     text-align: center;
@@ -83,7 +81,7 @@
   }
 
   h5{
-    font-family: 'Playfair Display';
+    font-family: 'Playfair Display', 'Times New Roman', Times, serif;
     max-width: 100%;
     line-height: 1.5
   }
@@ -97,7 +95,7 @@
   }
 
   .nav-link{
-    font-family: 'Raleway';
+    font-family: 'Raleway', Helvetica, Arial, sans-serif;
     color: #e2574c;
     text-transform: uppercase;
   }
@@ -107,7 +105,7 @@
   }
 
   .social-list a{
-    font-family: 'Raleway';
+    font-family: 'Raleway', Helvetica, Arial, sans-serif;
     font-weight: 300;
     color: white;
   }
@@ -227,7 +225,7 @@
     display: none;
     background: #e2574c;
     color: white;
-    font-family: 'Raleway';
+    font-family: 'Raleway', Helvetica, Arial, sans-serif;
     width: 15px;
     height: 15px;
     font-weight: 800;
