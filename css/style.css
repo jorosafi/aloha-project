@@ -52,6 +52,10 @@
     text-transform: uppercase;
   }
 
+  h2:hover{
+    color: #f5ebc6;
+  }
+
   h3{
     font-family: 'raleway';
     color: white;
@@ -92,7 +96,7 @@
     text-decoration: none;
   }
 
-  li a{
+  .nav-link{
     font-family: 'Raleway';
     color: #e2574c;
     text-transform: uppercase;
@@ -102,9 +106,10 @@
     box-sizing: border-box;
   }
 
-  .social-list{
+  .social-list a{
     font-family: 'Raleway';
     font-weight: 300;
+    color: white;
   }
 
   
@@ -121,7 +126,7 @@
 
   .section-head{
     padding: 0 5%;
-    min-height: 40vh;
+    min-height: 200px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -194,6 +199,10 @@
     margin: 0;
   }
 
+  .nav-link:hover{
+    color: #b64036;
+  }
+
   .cart{
     flex-basis: 49%;
     order: 2;
@@ -215,7 +224,7 @@
   }
 
   .cart-number{
-    display: inline-block;
+    display: none;
     background: #e2574c;
     color: white;
     font-family: 'Raleway';
@@ -253,7 +262,6 @@
   .styles-flex{
     display: flex;
     flex-direction: column;
-    background-color: aqua;
     min-height: 100vh;
   }
 
@@ -263,14 +271,6 @@
     flex-wrap: wrap;
     flex-basis: 49.9%;
     height: 50vh;
-  }
-
-  .top{
-    background-color: bisque
-  }
-
-  .bottom{
-    background-color: aquamarine;
   }
 
   .styles-item{
@@ -336,7 +336,11 @@
 
 
 /* products */
-  /* Flickity Carousel Styling */
+  .main-carousel{
+    min-height: 500px;
+    padding: 20px 0;
+  }  
+/* Flickity Carousel Styling */
   .flickity-enabled {
     position: relative;
   }
@@ -357,7 +361,7 @@
 
   .carousel-cell {
     width: 100%; 
-    height: 80vh; 
+    min-height: 500px; 
     margin-right: 10px;
   }
   
@@ -445,7 +449,7 @@
   .flickity-page-dots {
     position: absolute;
     width: 100%;
-    bottom: 10px;
+    bottom: 15px;
     padding: 0;
     margin: 0;
     list-style: none;
@@ -471,6 +475,11 @@
   }
 
   /* other product styling */
+  .add-to-cart a{
+    text-decoration: none;
+    color: white;
+  }
+
   .add-to-cart{
     display: block;
     height: 25px;
@@ -483,6 +492,10 @@
     border: none;
     font-size: 0.7em;
     margin-top: 1em;
+  }
+
+  .add-to-cart:hover{
+    background: #0f87a2;
   }
 
   .carousel-cell img{
@@ -520,7 +533,7 @@
     border-radius: 30px;
     border: none;
     margin: 0 auto;
-    padding: 1.7em 0;
+    padding: 1.7em 1em;
   }
 
   .email-button{
@@ -574,6 +587,14 @@
     text-decoration: none;
     padding: 1em 1em;
   }
+  
+  .social-link:hover{
+    color: #e2574c
+  }
+
+  .social-link i:hover{
+    color: #e2574c
+  }
 
   .social-text{
     display: none;
@@ -590,171 +611,176 @@
         width: 100%;
         padding: 0 15%;
       }
-    /* font style changes for tab and desk */
-    h1{
-      font-size: 2.3rem;
-    }
+    /* font styles*/
+      h1{
+        font-size: 2.3rem;
+      }
 
-    h3 span{
-      font-size: 4rem;
-    }
-    /* header changes for Tab and Desk */
-    header{
-      height: 70px;
-      margin-top: -70px;
-    }
-    nav{
-      flex-basis: 14%;
-      justify-content: space-between;
-      align-items: center;
-    }
+      h2{
+        font-size: 2em;
+      }
+
+      h3 span{
+        font-size: 4rem;
+        padding-top: 0.2em;
+      }
+    /* header */
+      header{
+        height: 70px;
+        margin-top: -70px;
+      }
+      nav{
+        justify-content: space-between;
+        align-items: center;
+      }
+      
+      .nav-item{
+        height: 100%;
+      }
+      
+      .logo{
+        flex-basis: 25%;
+        order: 1;
+      }
+
+      .logo img{
+        width: 70%;
+        max-width: 100px;
+      }
+      
+      .menu{
+        flex-basis: 49%;
+        order: 2;
+        max-width: 50%;
+        border-top:none;
+        justify-content: center;
+      }
+
+      .menu li{
+        padding: 0 20px;
+      }
+
+      .cart{
+        flex-basis: 25%;
+        order: 3;
+      }
+
+      .cart img{
+        left: 0%;
+      }
+      .hero-banner{
+        margin-top: 70px;
+
+      }
+
+    /* Styles Menu*/
+      .styles-flex{
+        height: 60vh;
+      }
+
+      .styles-item{
+        flex-basis: 25%;
+      }
+      
+      .mens, .womens{
+        flex-basis: 50%;
+      }
+
+      .mens{
+        border-right: 0.2em solid white;
+      }
     
-    .nav-item{
-      height: 100%;
-    }
+      .trends{
+        border-left: 0.2em solid white;
+      }
     
-    .logo{
-      flex-basis: 25%;
-      order: 1;
-    }
+      .glasses{
 
-    .logo img{
-      width: 70%;
-      max-width: 100px;
-    }
+      }
     
-    .menu{
-      flex-basis: 49%;
-      order: 2;
-      border-top:none;
-      justify-content: center;
-    }
+      .sale{
 
-    .menu li{
-      padding: 0 20px;
-    }
-
-    .cart{
-      flex-basis: 25%;
-      order: 3;
-    }
-
-    .cart img{
-      left: 0%;
-    }
-    .hero-banner{
-      margin-top: 70px;
-
-    }
-
-    /* Styles Menu changes for Tab and Desk */
-    .styles-flex{
-      height: 60vh;
-    }
-
-    .styles-item{
-      flex-basis: 25%;
-    }
+      }
     
-    .mens, .womens{
-      flex-basis: 50%;
-    }
+      .bags{
+        border-right: 0.2em solid white;
+      }
+    
+      .womens{
+        border-left: 0.2em solid white;
+      }
 
-    .mens{
-      border-right: 0.2em solid white;
-    }
-  
-    .trends{
-      border-left: 0.2em solid white;
-    }
-  
-    .glasses{
+    /* Products */
+      .products-section{
+        
+      }
+      .products-container{
+        flex-direction: row;
+        flex-wrap: wrap;
+        min-height: 60vh;
+      }
 
-    }
-  
-    .sale{
+      .product{
+        flex-basis: 50%;
+        max-height: 50%;
+      }
 
-    }
-  
-    .bags{
-      border-right: 0.2em solid white;
-    }
-  
-    .womens{
-      border-left: 0.2em solid white;
-    }
-
-    /* product changes for tab and desk */
-    .products-section{
-      min-height: 100vh;
-    }
-    .products-container{
-      flex-direction: row;
-      flex-wrap: wrap;
-      min-height: 60vh;
-    }
-
-    .product{
-      flex-basis: 50%;
-      max-height: 50%;
-    }
-
-    .carousel-cell {
-      width: 50%; 
-    }
+      .carousel-cell {
+        width: 50%; 
+      }
 
 
     
-    /* updates section changes for tab and desk */
-    .email-form{
-      width: 400px;
-    }
-  
-    .email-button{
-      top: 2.08rem;
-      right: 0.1rem;
-    }
-
-    /* footer section changes for tab and desk */
-    footer{
-      flex-direction: row;
-      justify-content: space-between;
-      align-content: center;
-    }
-
-    .footer-text{
-      flex-basis: 30%;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-    }
+    /* updates */
+      .email-form{
+        width: 400px;
+      }
     
-    .copyright, .address{
-      text-align: left;
-      padding: 10px 20px;
-    }
+      .email-button{
+        top: 2.08rem;
+        right: 0.1rem;
+      }
 
-    .social-box{
-      flex-basis: 30%;
-      display: flex;
-      align-content: center;
-      justify-content: flex-end;
-    }
-    
-    ul{
-      flex-direction: column;
-      justify-content: center;
-    }
-    
-    .social-box li{
-    padding: 0.4em 1em;
-    width: auto;
-    }
+    /* footer */
+      footer{
+        flex-direction: row;
+        justify-content: space-between;
+        align-content: center;
+      }
 
-    .social-text{
-    display: inline-block;
-    padding: 0 1em 0 0.7em;
-    }
+      .footer-text{
+        flex-basis: 30%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+      
+      .copyright, .address{
+        text-align: left;
+        padding: 10px 20px;
+      }
+
+      .social-box{
+        flex-basis: 30%;
+        display: flex;
+        align-content: center;
+        justify-content: flex-end;
+      }
+      
+      ul{
+        flex-direction: column;
+        justify-content: center;
+      }
+      
+      .social-box li{
+      padding: 0.4em 1em;
+      width: auto;
+      }
+
+      .social-text{
+      display: inline-block;
+      padding: 0 1em 0 0.7em;
+      }
 
   }
 
@@ -762,44 +788,44 @@
 
 
   @media all and (min-width: 1240px){
-    /* top nav changes for desktop */
-    .menu{
-      padding: 10%;
-    }
+    /* top nav  */
+      .menu{
+        padding: 10%;
+      }
     /* Styles menu */
-    .styles{
-      height: auto;
-    }
-    .styles-flex{
-      height: 40vh;
-    }
+      .styles{
+        height: auto;
+      }
+      .styles-flex{
+        height: 40vh;
+      }
 
-    /* product changes for desk */
-    .products-container{
-      flex-wrap: nowrap;
-    }
-    .product{
-      flex-basis: 25%;
-    }
+    /* productS */
+      .products-container{
+        flex-wrap: nowrap;
+      }
+      .product{
+        flex-basis: 25%;
+      }
 
-    .carousel-cell {
-      width: 25%; 
-    }
+      .carousel-cell {
+        width: 25%; 
+      }
 
-    /* updates section changes for desk */
-    .updates{
-      background-size: cover;
-    }
-    input{
-      width: 50%;
-    }
+    /* updates */
+      .updates{
+        background-size: cover;
+      }
+      input{
+        width: 50%;
+      }
 
-    /* updates for footer */
-    .footer-text{
-      padding-left: 100px;
-    }
+    /* footer */
+      .footer-text{
+        padding-left: 100px;
+      }
 
-    .social-box{
-      padding-right: 100px;
-    }
+      .social-box{
+        padding-right: 100px;
+      }
   }

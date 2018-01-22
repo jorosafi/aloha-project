@@ -44,3 +44,24 @@
         }
       }
     });
+
+
+//Cart Number
+  var shoppingItems = 0
+$('.add-to-cart').click(function(){
+
+      shoppingItems = shoppingItems + 1;
+
+      $('.cart-number').replaceWith('<p class="cart-number">'+shoppingItems+'</p>');
+
+      $('.cart-number').css('display','inline');
+    });
+
+// Email Form 
+  $(".email-button").click(function() {
+    if ($('#email-input').val().indexOf('@') < 1){
+     alert('Please insert a valid email address');
+    }else{
+      alert('Thank you for subscribing to our updates!')
+    } });
+  
