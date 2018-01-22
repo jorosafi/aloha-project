@@ -1,11 +1,4 @@
 
-/* to do:
-  1. give font families backups
-
-*/
-
-
-
 /* Font Styles */
 
   body{
@@ -100,9 +93,7 @@
     text-transform: uppercase;
   }
 
-  *{
-    box-sizing: border-box;
-  }
+
 
   .social-list a{
     font-family: 'Raleway', Helvetica, Arial, sans-serif;
@@ -110,13 +101,14 @@
     color: white;
   }
 
-  
+/* Main Containers */
+  *{
+    box-sizing: border-box;
+  }
 
   body{
     font-size: 16px;
   }
-
-/* Main Containers */
 
   .container{
     max-width: 100%;
@@ -512,7 +504,7 @@
   }
 
   .updates h1{
-    padding-top: 1em;
+    padding-top: 1rem;
     text-shadow: 1px 1px 4px #2d2d2d;
   }
 
@@ -663,9 +655,6 @@
         order: 3;
       }
 
-      .cart img{
-        left: 0%;
-      }
       .hero-banner{
         margin-top: 70px;
 
