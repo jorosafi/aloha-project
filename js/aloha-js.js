@@ -48,7 +48,7 @@
 
 //Cart Number
   var shoppingItems = 0
-$('.add-to-cart').click(function(){
+  $('.add-to-cart').click(function(){
 
       shoppingItems = shoppingItems + 1;
 
