@@ -594,6 +594,10 @@
     color: white;
   }
 
+  .contact-email:hover{
+    color: #e2574c;
+  }
+
 /* media queries */
   @media all and (min-width: 600px){
     /* main containers */
