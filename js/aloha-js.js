@@ -1,4 +1,6 @@
-//Flickity Carousel
+$( document ).ready(function(){
+
+  //Flickity Carousel
   $('.main-carousel').flickity({
     // options
     cellAlign: 'left',
@@ -7,7 +9,7 @@
     prevNextButtons: false
   });
 
-//Smooth Scrolling
+  //Smooth Scrolling
   // Select all links with hashes
   $('a[href*="#"]')
     // Remove links that don't actually link to anything
@@ -46,7 +48,7 @@
     });
 
 
-//Cart Number
+  //Cart Number
   var shoppingItems = 0
   $('.add-to-cart').click(function(){
 
@@ -57,11 +59,16 @@
       $('.cart-number').css('display','inline');
     });
 
-// Email Form 
-  $(".email-button").click(function() {
+  // Email Form 
+  $(".email-button").click(function(event) {
+    event.preventDefault();
     if ($('#email-input').val().indexOf('@') < 1){
-     alert('Please insert a valid email address');
+    alert('Please insert a valid email address');
     }else{
       alert('Thank you for subscribing to our updates!')
     } });
+
+})
+
+
   

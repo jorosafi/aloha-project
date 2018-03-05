@@ -704,14 +704,6 @@
         border-left: 0.2em solid white;
       }
     
-      .glasses{
-
-      }
-    
-      .sale{
-
-      }
-    
       .bags{
         border-right: 0.2em solid white;
       }
@@ -721,9 +713,6 @@
       }
 
     /* Products */
-      .products-section{
-        
-      }
       .products-container{
         flex-direction: row;
         flex-wrap: wrap;
@@ -793,8 +782,6 @@
       }
 
   }
-
-
 
 
   @media all and (min-width: 1240px){
