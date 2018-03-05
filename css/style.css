@@ -101,6 +101,10 @@
     color: white;
   }
 
+  .uppercase{
+    text-transform: uppercase;
+  }
+
 /* Main Containers */
   *{
     box-sizing: border-box;
