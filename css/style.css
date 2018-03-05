@@ -19,7 +19,7 @@
     font-weight: bold;
   }
 
-  h1{
+  h2{
     font-family: 'Playfair Display', 'Times New Roman', Times, serif;
     font-size: 1.9rem;
     font-style: italic;
@@ -29,13 +29,13 @@
     text-align: center;
   }
 
-  h1 span{
+  h2 span{
     font-weight: bold;
     font-style: normal;
     max-width: 100%;
   }
 
-  h2{
+  h3{
     font-family: 'Raleway', Helvetica, Arial, sans-serif;
     color: white;
     max-width: 100%;
@@ -43,11 +43,11 @@
     text-transform: uppercase;
   }
 
-  h2:hover{
+  h3:hover{
     color: #f5ebc6;
   }
 
-  h3{
+  h4{
     font-family: 'Raleway', Helvetica, Arial, sans-serif;
     color: white;
     font-size: 1.3rem;
@@ -55,7 +55,7 @@
     max-width: 100%;
   }
 
-  h3 span{
+  h4 span{
     font-family: 'Playfair Display', 'Times New Roman', Times, serif;
     font-style: normal;
     font-size: 2.7rem;
@@ -64,7 +64,7 @@
     padding-top: 0.6em;
   }
 
-  h4{
+  h5{
     font-family: 'Playfair Display', 'Times New Roman', Times, serif;
     max-width: 100%;
     color: #e2574c;
@@ -73,13 +73,13 @@
     padding: 0.8em 0 0.8em 0;
   }
 
-  h5{
+  h6{
     font-family: 'Playfair Display', 'Times New Roman', Times, serif;
     max-width: 100%;
     line-height: 1.5
   }
 
-  h5 a{
+  h6 a{
     text-decoration: underline;
   }
 
@@ -503,7 +503,7 @@
     min-height: 50vh;
   }
 
-  .updates h1{
+  .updates h2{
     padding-top: 1rem;
     text-shadow: 1px 1px 4px #2d2d2d;
   }
@@ -606,15 +606,15 @@
         padding: 0 15%;
       }
     /* font styles*/
-      h1{
+      h2{
         font-size: 2.3rem;
       }
 
-      h2{
+      h3{
         font-size: 2em;
       }
 
-      h3 span{
+      h4 span{
         font-size: 4rem;
         padding-top: 0.2em;
       }
