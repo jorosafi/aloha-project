@@ -53,6 +53,7 @@
     font-size: 1.3rem;
     font-weight: lighter;
     max-width: 100%;
+    display: block;
   }
 
   h4 span{
@@ -60,7 +61,7 @@
     font-style: normal;
     font-size: 2.7rem;
     max-width: 100%;
-    display: inline-block;
+    display: block;
     padding-top: 0.6em;
   }
 
@@ -233,6 +234,7 @@
   .hero-banner{
     min-height: 500px;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
@@ -593,6 +595,19 @@
   .social-text{
     display: none;
   }
+
+  .social-text::before{
+    content: "\00a0";
+  }
+  
+  .facebook::before{
+    content: "\00a0\00a0";
+  }
+
+  .google::before{
+    content: "";
+  }
+
 
   i{
     color: white;
