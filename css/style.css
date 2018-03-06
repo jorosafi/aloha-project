@@ -128,6 +128,10 @@
     flex-direction: column;
   }
 
+  .styles, .styles-flex, .product-section, .updates{
+    padding-top: 125px;
+    margin-top: -125px;
+  } /* This code block fixes the smooth scroll offset problem */
 
 
 /* header */
@@ -623,6 +627,11 @@
       .section-head{
         width: 100%;
         padding: 0 15%;
+      }
+
+      .styles, .styles-flex, .product-section, .updates{
+        padding-top: 70px;
+        margin-top: -70px;
       }
     /* font styles*/
       h2{
